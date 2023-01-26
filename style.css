@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --background-color:rgb(34 37 75);
+  --hover-color:rgb(20, 22, 44);
+  --font-color: rgb(198, 192, 192);
+  --special-color: rgb(55 59 105);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  background-color: var(--special-color)
+}
+
+h1 {
+  font-size: 60px;
+  font-family: "Lobster Two";
+  float: left;
+  margin-left: 3%;
+  color: var(--font-color);
+}
+
+.search-container {
+  position: relative;
+  float: right;
+  margin-right: 10%;
+  width: 300px;
+  height: 100px;
+}
+
+#search-bar {
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  color: var(--font-color);
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 30px;
+  
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 40%;
+
+}
+
+#search-bar:focus{
+  outline: none;
+}
+
+#search-btn {
+  width: 50px;
+  height: 50px;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 100%;
+  font-size: 30px;
+  color: var(--font-color);
+  padding-top: 5px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: 0%;
+}
+
+#search-btn:hover {
+  background-color: var(--hover-color);
+  transition-property: background-color;
+  transition-duration: .4s;
+}
+
+main{
+  width: 100%;
+  margin-top: 50px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.film {
+  height: 950px;
+  margin-bottom: 20px;
+  width: 30%;
+  background-color: var(--special-color);
+  color: var(--font-color);
+  text-align: center;
+  border-radius: 20px;
+}
+
+.film * {
+  line-height: 1.4em; 
+}
+
+
+h3 {
+  font-family: "Lobster Two";
+  font-size: 30px;
+}
+
+.img-wrapper {
+  width: 100%;
+}
+
+.film img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
