@@ -1,4 +1,4 @@
-import { getMovies, displayFilms, API_KEY} from "./utils.js";
+import { getMovies, displayFilms, search, API_KEY} from "./utils.js";
 
 const SEARCHAPI =
   `https://api.themoviedb.org/3/search/movie?&api_key=${API_KEY}&query=`;
@@ -25,12 +25,8 @@ function setTheme(themeObj) {
 window.addEventListener('DOMContentLoaded', function () {
   let theme = localStorage.getItem('theme');
   if (theme) {
-    console.log("theme was set before"); 
-    console.log(JSON.parse(theme));
   } else {
     localStorage.setItem('theme', JSON.stringify({isDark: true}));
-    // theme = {isDark: true};
-    console.log("set theme to light");
   }
 
   setTheme(JSON.parse(theme));
@@ -53,8 +49,9 @@ dropdownMenuButton.addEventListener('click', (e) => {
 
 searchBtn.addEventListener("click", () => {
   const searchTerm = searchBar.value;
-  getMovies(SEARCHAPI + searchTerm);
-  search.value = "";
+  console.log(SEARCHAPI + searchTerm);
+  search(SEARCHAPI + searchTerm);
+  searchBar.value = "";
 });
 
 
