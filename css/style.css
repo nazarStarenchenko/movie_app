@@ -71,7 +71,22 @@ h1 {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 40%;
+}
 
+@media (max-width: 768px) {
+  .search-container {
+    width: 300px;
+    margin-right: 20%;
+  }
+
+  #search-bar {
+    width: 120px;   
+  }
+
+  h1 {
+    font-size: 50px;
+    margin-top: 10px;
+  }
 }
 
 #search-bar:focus{
